@@ -1,0 +1,57 @@
+{
+  "name": "Food_App",
+  "version": "1.0.0",
+  "description": "Food app similar to swiggy home page.",
+  "keywords": [
+    "Swiggy",
+    "food app"
+  ],
+  "homepage": "https://github.com/chandanaswal18/food_app",
+  "license": "UNLICENSED",
+  "private": true,
+  "author": {
+    "name": "Chandan Aswal",
+    "email": "chandanaswal@gmail.com",
+    "url": "https://www.linkedin.com/in/chandan-aswal/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chandanaswal18/food_app.git"
+  },
+  "main": "index.jsx",
+  "scripts": {
+    "start": "npm run build && node --optimize_for_size --max_old_space_size=460 --gc_interval=100 server.js",
+    "build": "webpack --colors --config ./webpack.config.prod.js",
+    "start-dev": "webpack-dev-server --progress --colors --config ./webpack.config.dev.js"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^2.0.2",
+    "express": "^4.16.4",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "prop-types": "^15.6.2",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.8.1"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "style-loader": "^0.23.1"
+  }
+}
